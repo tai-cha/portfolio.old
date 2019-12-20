@@ -28,7 +28,7 @@ jobs:
           ${{ runner.os }}-node-
 
     - name: install
-      run: npm install
+      run: yarn install
 
     - name: eslint
-      run: npm run lint
+      run: yarn lint
