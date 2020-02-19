@@ -7,11 +7,13 @@
         <router-link to="/works">Works</router-link>
       </nav>
     </header>
-    <router-view/>
+    <transition mode="out-in">
+      <router-view/>
+    </transition>
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -25,6 +27,7 @@ header {
   top: 0;
   left: 0;
   background: #565656;
+  z-index: 99;
 }
 
 #nav {
@@ -46,5 +49,26 @@ header {
       color: #E8F0F4;
     }
   }
+}
+
+.v-enter {
+  transform: translateY(3em);
+  opacity: 0;
+}
+.v-enter-to {
+  opacity: 1;
+}
+.v-enter-active {
+  transition: all 1s 0s ease;
+}
+.v-leave {
+  opacity: 1;
+}
+.v-leave-to {
+  transform: translateY(-5em);
+  opacity: 0;
+}
+.v-leave-active {
+  transition: all .5s 0s ease;
 }
 </style>
