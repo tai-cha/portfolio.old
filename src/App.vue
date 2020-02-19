@@ -20,9 +20,13 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #E8F0F4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 header {
+  width: 100%;
   position: sticky;
   top: 0;
   left: 0;
