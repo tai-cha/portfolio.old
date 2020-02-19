@@ -2,8 +2,8 @@
   <div id="app">
     <header>
       <nav id="nav">
-        <router-link to="/">Home</router-link> |
-        <router-link to="/about">About</router-link> |
+        <router-link to="/">Home</router-link>
+        <router-link to="/about">About</router-link>
         <router-link to="/works">Works</router-link>
       </nav>
     </header>
@@ -33,9 +33,17 @@ header {
   a {
     font-weight: bold;
     color: #B9F5F9;
+    display: inline-block;
 
     &.router-link-exact-active {
       color: #FFE79E;
+    }
+
+    &:not(:last-child)::after {
+      display: inline-block;
+      margin: 0 0.4em;
+      content: '|';
+      color: #E8F0F4;
     }
   }
 }
