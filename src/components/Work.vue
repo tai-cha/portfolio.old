@@ -56,7 +56,7 @@
     text-align: left;
   }
   .img-container {
-    max-width: 80vw;
+    max-width: 100%;
     width: 500px;
     display: flex;
     flex-direction: column;
