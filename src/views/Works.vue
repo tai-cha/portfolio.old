@@ -28,7 +28,6 @@
     beforeCreate() {
       this.$axios.get('/works')
         .then(response =>{
-          console.log(response.data)
           this.work_list = response.data.contents
         })
     }

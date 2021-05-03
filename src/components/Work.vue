@@ -5,10 +5,13 @@
       <img
         v-if="work.image"
         :src="work.image.url"
-        :alt='`"${work.title}"の画像`'
-      />
+        :alt="`&quot;${work.title}&quot;の画像`"
+      >
     </div>
-    <div class="description" v-html="work.description" />
+    <div
+      class="description"
+      v-html="work.description"
+    />
     <a
       v-if="work.url"
       :href="work.url"
