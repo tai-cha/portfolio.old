@@ -4,11 +4,14 @@
     <div class="img-container">
       <img
         v-if="work.image"
-        :src="require(`@/assets/images/${work.image}`)"
-        :alt='`"${work.title}"の画像`'
-      />
+        :src="work.image.url"
+        :alt="`&quot;${work.title}&quot;の画像`"
+      >
     </div>
-    <div class="description" v-html="formedDescription" />
+    <div
+      class="description"
+      v-html="work.description"
+    />
     <a
       v-if="work.url"
       :href="work.url"
@@ -27,11 +30,8 @@
       }
     },
     computed: {
-      formedDescription() {
-        if (!(this.work && this.work.description)) return ''
-        return this.work.description.replace("\n", "\n<br />")
-      }
-    }
+    },
+    
   };
 </script>
 

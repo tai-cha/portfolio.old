@@ -1,7 +1,12 @@
 <template>
   <div class="home">
     <h1>Hello, I am taichan!</h1>
-    <router-link to="/about" class="learn">Learn about me.</router-link>
+    <router-link
+      to="/about"
+      class="learn"
+    >
+      Learn about me.
+    </router-link>
   </div>
 </template>
 
@@ -9,7 +14,7 @@
 // @ is an alias to /src
 
 export default {
-  name: 'home',
+  name: 'Home',
   components: {
 
   }

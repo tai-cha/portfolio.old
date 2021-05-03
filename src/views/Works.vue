@@ -14,7 +14,6 @@
 </template>
 
 <script>
-  import WorkList from '../utils/work_list'
   import Work from '../components/Work';
   export default {
     name: 'Works',
@@ -23,8 +22,14 @@
     },
     data() {
       return {
-        work_list: WorkList.get()
+        work_list: []
       }
+    },
+    beforeCreate() {
+      this.$axios.get('/works')
+        .then(response =>{
+          this.work_list = response.data.contents
+        })
     }
   };
 </script>

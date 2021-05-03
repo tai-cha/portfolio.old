@@ -2,13 +2,19 @@
   <div id="app">
     <header>
       <nav id="nav">
-        <router-link to="/">Home</router-link>
-        <router-link to="/about">About</router-link>
-        <router-link to="/works">Works</router-link>
+        <router-link to="/">
+          Home
+        </router-link>
+        <router-link to="/about">
+          About
+        </router-link>
+        <router-link to="/works">
+          Works
+        </router-link>
       </nav>
     </header>
     <transition mode="out-in">
-      <router-view/>
+      <router-view />
     </transition>
   </div>
 </template>
